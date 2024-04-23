@@ -3,6 +3,7 @@ import StateExample from './03/StateExample';
 import Count from './03/Count';
 import { useState } from 'react';
 import NewCount from './03/NewCount';
+import Input from './03/Input';
 
 function App() {
 
@@ -19,6 +20,9 @@ function App() {
   }
   return (
     <div>
+        <Input/>
+
+
       <Count count={count} />
       <NewCount count={count}
                 clearCount={clearCount}
