@@ -4,6 +4,8 @@ import Count from './03/Count';
 import { useState } from 'react';
 import NewCount from './03/NewCount';
 import Input from './03/Input';
+import './sass/materialize.scss'
+import InputWithStyle from './04/InputWithStyle';
 
 function App() {
 
@@ -19,16 +21,30 @@ function App() {
 
   }
   return (
-    <div>
-        <Input/>
+      <div>
+          <nav>
+              <div className={'nav-wrapper'}>
+                  <div>두잇 리엑트 시작하기</div>
+              </div>
+          </nav>
+
+          <div>
+              <h1>ajxjfldjf ㅊㄴㄴ</h1>
+
+              <InputWithStyle
+                  name={'abc'}
+                  value={'add'}
+              />
+
+              <Count count={count} />
+              <NewCount count={count}
+                        clearCount={clearCount}
+              />
+              <button onClick={resetCount}>{count +10}으로 초기화</button>
+          </div>
+      </div>
 
 
-      <Count count={count} />
-      <NewCount count={count}
-                clearCount={clearCount}
-      />
-      <button onClick={resetCount}>{count +10}으로 초기화</button>
-    </div>
   )
 
 }
